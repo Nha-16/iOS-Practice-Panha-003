@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B95593427439D3A00F834DB /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B95593327439D3A00F834DB /* PostViewController.swift */; };
 		8CB675D1273F55F900378473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB675D0273F55F900378473 /* AppDelegate.swift */; };
 		8CB675D3273F55F900378473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB675D2273F55F900378473 /* SceneDelegate.swift */; };
 		8CB675D5273F55F900378473 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB675D4273F55F900378473 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		1B3CEE82D49910F30B179E41 /* Pods-media-demo-9th.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-media-demo-9th.debug.xcconfig"; path = "Target Support Files/Pods-media-demo-9th/Pods-media-demo-9th.debug.xcconfig"; sourceTree = "<group>"; };
 		61057F7C4DE37FB784AEB6A3 /* Pods-media-demo-9th.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-media-demo-9th.release.xcconfig"; path = "Target Support Files/Pods-media-demo-9th/Pods-media-demo-9th.release.xcconfig"; sourceTree = "<group>"; };
 		75071F15683129B2E73FAA3C /* Pods_media_demo_9th.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_media_demo_9th.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B95593327439D3A00F834DB /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		8CB675CD273F55F900378473 /* media-demo-9th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "media-demo-9th.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB675D0273F55F900378473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CB675D2273F55F900378473 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8CB675E7273F590C00378473 /* SignInViewController.swift */,
 				8CB675E9273F591800378473 /* SignUpViewController.swift */,
 				8CB675F1273F6E4D00378473 /* ProfileViewController.swift */,
+				8B95593327439D3A00F834DB /* PostViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B95593427439D3A00F834DB /* PostViewController.swift in Sources */,
 				8CB675E8273F590C00378473 /* SignInViewController.swift in Sources */,
 				8CB675F0273F5E0200378473 /* SignUpModel.swift in Sources */,
 				8CB675D5273F55F900378473 /* ViewController.swift in Sources */,

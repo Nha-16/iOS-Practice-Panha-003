@@ -18,11 +18,59 @@ struct PostService {
         "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "key") ?? "")"
     ]
     
-    func uploadImage(){
+    func uploadImage(imageData: Data?,completion: @escaping(String?)->()){
+        
+        if let safeData = imageData {
+            AF.upload(multipartFormData: { multiform in
+                multiform.append(safeData, withName: "image", fileName: "ams", mimeType: "image/jpeg")
+            }, to: "\(postURL)/image").response { response in
+                
+                if let error = response.error{
+                    print(error.localizedDescription)
+                }
+                
+                if let data = response.data {
+                    
+                    let jsonData = try! JSON(data: data)
+                    
+                    print(jsonData)
+                    
+                    let url = jsonData["url"].stringValue
+                    
+                    completion(url)
+                    
+                }
+                
+                
+            }
+        }else{
+            completion(nil)
+        }
+        
         
     }
     
-    func postPost(){
+    func postPost(caption: String?, image: String?, completion: @escaping(Result<String, Error>)->()){
+        
+        let post: [String:Any] = [
+            "caption": caption ?? "no caption",
+            "image": image ?? "no image"
+        ]
+        
+        AF.request("\(postURL)/posts/create", method: .post, parameters: post, encoding: JSONEncoding.default, headers: headers).response { response in
+            if let error = response.error {
+                completion(.failure(error))
+            }else{
+                
+                guard let data = response.data else {
+                    return
+                }
+                let jsonData = try! JSON(data: data)
+                print("hi",jsonData)
+                completion(.success(jsonData["message"].stringValue))
+            }
+            
+        }
         
     }
     
